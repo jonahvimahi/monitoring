@@ -7,4 +7,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
-app.listen(4545, () => console.log('we are up and running on 4545'))
+const port = process.env.PORT || 4545
+
+app.listen(4545, () => console.log(`we are up and running on ${port}`))
